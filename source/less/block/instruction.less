@@ -1,0 +1,75 @@
+.instruction {
+  padding-top: 20px;
+  padding-bottom: 29px;
+}
+
+.instruction__title {
+  color: #000000;
+  font-family: @font-title;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.instruction__list {
+  .list();
+}
+
+.instruction__item {
+  margin-bottom: 20px;
+  padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+  padding-top: 2px;
+
+  p {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: @color-accent;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("/img/mobile/instruction-leaf.svg");
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("/img/mobile/instruction-powder.svg");
+    }
+  }
+
+  &--eat {
+    &::before {
+      background-image: url("/img/mobile/instruction-nutrition.svg");
+    }
+  }
+
+  &--time {
+    &::before {
+      background-image: url("/img/mobile/instruction-time.svg");
+    }
+  }
+}
+
+.instruction__description {
+  font-family: @font-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @color-text;
+}
